@@ -5,7 +5,7 @@ import { saveData } from '../Modules/PerformanceData'
 class DisplayCooperResult extends Component {
 
   calculate() {
-    return CooperCalculator(this.props.distance, this.props.gender, this.props.age);
+    return CooperCalculator(this.props.distance, this.props.gender, this.props.age)
   }
 
   async saveCooperData() {

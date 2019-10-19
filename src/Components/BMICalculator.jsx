@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import DisplayResult from './DisplayResult'
+import DisplayBMIResult from './DisplayResult'
 import MethodSelect from './MethodSelect'
 
 class BMICalculator extends Component {
@@ -49,7 +49,7 @@ class BMICalculator extends Component {
           />
         </div>
 
-        <DisplayResult
+        <DisplayBMIResult
           method={this.state.method}
           weight={this.state.weight}
           height={this.state.height}
