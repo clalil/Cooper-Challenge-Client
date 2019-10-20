@@ -5,37 +5,23 @@
   [
     {
       "data": {
-        "message": "Excellent"
+        "message": "Below Average"
       },
       "id": 1,
       "user_id": 1
     },
     {
       "data": {
-        "message": "Above Average"
+        "message": "Average"
       },
       "id": 2,
       "user_id": 1
     },
     {
       "data": {
-        "message": "Average"
+        "message": "Above Average"
       },
       "id": 3,
-      "user_id": 1
-    },
-    {
-      "data": {
-        "message": "Below Average"
-      },
-      "id": 4,
-      "user_id": 1
-    },
-    {
-      "data": {
-        "message": "Poor"
-      },
-      "id": 5,
       "user_id": 1
     }
   ]

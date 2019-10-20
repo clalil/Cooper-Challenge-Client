@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import CooperCalculator from '../Modules/CooperCalculator'
 import { saveData } from '../Modules/PerformanceData'
-import { Button, Placeholder } from 'semantic-ui-react'
 
 class DisplayCooperResult extends Component {
 
   calculate() {
-    return CooperCalculator(this.props.distance, this.props.gender, this.props.age)
+    return CooperCalculator(this.props.distance, this.props.gender, this.props.age);
   }
 
   async saveCooperData() {
@@ -26,10 +25,10 @@ class DisplayCooperResult extends Component {
     if (this.props.authenticated === true && this.props.entrySaved === false) {
       saveButton = (
         <>
-          <Button color='vk' id="save-result"
+          <button id="save-result"
             onClick={this.saveCooperData.bind(this)}>
             Save entry
-          </Button>
+          </button>
         </>
       )
     } else if (this.props.authenticated === true && this.props.entrySaved === true) {
@@ -50,9 +49,7 @@ class DisplayCooperResult extends Component {
     }
     return (
       <div>
-        <Placeholder fluid>
-          {results}
-        </Placeholder>
+        {results}
       </div>
     )
   }

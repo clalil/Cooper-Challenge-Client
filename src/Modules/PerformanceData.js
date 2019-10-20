@@ -15,8 +15,7 @@ const saveData = async (result) => {
   const path = apiUrl + '/performance_data'
   return new Promise((resolve, reject) => {
     axios.post(path, {
-      performance_data: { 
-        data: { message: result }}
+      performance_data: { data: { message: result }}
     }, {
       headers: headers
     })
