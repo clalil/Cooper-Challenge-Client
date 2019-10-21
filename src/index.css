@@ -1,13 +1,100 @@
-body {
+/* App */
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1, 
+p {
+  text-align: center;
+}
+
+.ui.raised.very.padded.text.container.segment {
+  background: rgba(255, 255, 255, 0.5);
+  margin-top: 1rem;
+}
+
+/* InputFields */
+
+select {
+  position: relative; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #CCC;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(https://www.favicon.cc/logo3d/474207.png) 96% / 15% no-repeat #fff;
+}
+
+.ui.input {
+  position: relative; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.label-padding {
+  margin-top: 0.5rem;
+  position: relative; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ui.fluid.placeholder {
+  border-radius: 10px;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.login-form-div {
+  position: relative;
+  left: 25% !important;
+}
+
+.hi-user {
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
+#submit {
+  margin-bottom: 1rem;
+}
+
+#save-result {
+  margin-bottom: 0.5rem;
+}
+
+button {
+  position: relative; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* chart */
+
+#hide-button {
+  margin: 1rem 0;
+}
+
+/* Keep footer in place */
+#main-container {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: linear-gradient( 135deg, #F97794 10%, #623AA2 100%);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: #f5f5f5;
+  text-align: center;
 }

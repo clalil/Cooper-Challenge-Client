@@ -1,7 +1,7 @@
   
 import React from 'react'
 import { shallow } from 'enzyme'
-import DisplayBMIResult from '../Components/DisplayBMIResult';
+import DisplayBMIResult from '../Components/DisplayBMIResult'
 
 describe('<DisplayBMIResult />', () => {
   it('displays the calulation correct(metric)', () => {

@@ -5,18 +5,18 @@ describe('User attempts to view his/her performance data', () => {
     cy.server()
     cy.route({
       method: 'GET',
-      url: 'http://localhost:3000/api/v1/performance_data',
+      url: 'https://clarissa-sverrir-cooper.herokuapp.com/api/v1/performance_data',
       response: 'fixture:performance_data_index.json'
     })
     cy.route({
       method: 'POST',
-      url: 'http://localhost:3000/api/v1/auth/sign_in',
+      url: 'https://clarissa-sverrir-cooper.herokuapp.com/api/v1/auth/sign_in',
       response: 'fixture:login.json',
       headers: {
         "uid": "user@mail.com"
       }
     })
-    cy.get('#login').click();
+    cy.get('#login').click()
     cy.get('#login-form').within(() => {
       cy.get('#email').type('user@mail.com')
       cy.get('#password').type('password')
@@ -24,10 +24,14 @@ describe('User attempts to view his/her performance data', () => {
     })
   })
 
-  it('successfully', async () => {
+  it('successfully', () => {
     cy.get('button[id="show-index"]').click()
-    cy.contains('Below Average')
-    cy.contains('Average')
-    cy.contains('Above Average')
+    cy.get('.ui.large.header')
+    cy.should('contain', 'My Cooper Data Results')
+  })
+
+  it('shows doughnut chart', () => {
+    cy.get('.chartjs-render-monitor')
+      .should('be.visible')
   })
 })

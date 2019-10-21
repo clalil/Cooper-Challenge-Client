@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { BMICalculator } from '../Modules/BMICalculator'
 
-class DisplayResult extends Component {
+class DisplayBMIResult extends Component {
   calculate = () => {
     var weight = this.props.weight
     var height = this.props.height
@@ -19,4 +19,4 @@ class DisplayResult extends Component {
   }
 }
 
-export default DisplayResult
+export default DisplayBMIResult

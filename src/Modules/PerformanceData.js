@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { storeAuthCredentials } from './Auth'
 
-const apiUrl = 'http://localhost:3000/api/v1'
+const apiUrl = 'https://clarissa-sverrir-cooper.herokuapp.com/api/v1'
 
 const saveData = async (result) => {
   let headers = await sessionStorage.getItem("credentials")
@@ -15,7 +15,8 @@ const saveData = async (result) => {
   const path = apiUrl + '/performance_data'
   return new Promise((resolve, reject) => {
     axios.post(path, {
-      performance_data: { data: { message: result }}
+      performance_data: { 
+        data: { message: result }}
     }, {
       headers: headers
     })

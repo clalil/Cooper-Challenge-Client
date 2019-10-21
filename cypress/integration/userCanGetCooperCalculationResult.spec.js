@@ -1,6 +1,6 @@
 describe('Cooper Client calculates successfully', () => {
   before(() => {
-    cy.visit('http://localhost:3001');
+    cy.visit('http://localhost:3001')
     cy.get('input[id="distance"]').type('1000')
     cy.get('select[id="gender"]').select('female')
     cy.get('input[id="age"]').type('23')

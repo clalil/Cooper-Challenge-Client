@@ -1,14 +1,14 @@
 describe('BMI Converter', () => {
   before(() => {
-      cy.visit('http://localhost:3001');
+      cy.visit('http://localhost:3001')
   });
 
   beforeEach(() => {
-      cy.reload();
+      cy.reload()
   });
 
   it('should display "BMI Calculator" text on page', () => {
-      cy.contains('BMI Calculator');
+      cy.contains('BMI Calculator')
   });
 
   describe('Metric method', () => {

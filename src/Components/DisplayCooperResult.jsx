@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import CooperCalculator from '../Modules/CooperCalculator'
 import { saveData } from '../Modules/PerformanceData'
+import { Button, Placeholder } from 'semantic-ui-react'
 
 class DisplayCooperResult extends Component {
 
@@ -25,10 +26,10 @@ class DisplayCooperResult extends Component {
     if (this.props.authenticated === true && this.props.entrySaved === false) {
       saveButton = (
         <>
-          <button id="save-result"
+          <Button color='vk' id="save-result"
             onClick={this.saveCooperData.bind(this)}>
             Save entry
-          </button>
+          </Button>
         </>
       )
     } else if (this.props.authenticated === true && this.props.entrySaved === true) {
@@ -49,7 +50,9 @@ class DisplayCooperResult extends Component {
     }
     return (
       <div>
-        {results}
+        <Placeholder fluid>
+          {results}
+        </Placeholder>
       </div>
     )
   }
