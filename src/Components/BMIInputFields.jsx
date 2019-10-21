@@ -2,6 +2,8 @@ import React from 'react'
 import { Input } from 'semantic-ui-react'
 
 const BMIInputFields = (props) => {
+  let userChoiceMethod = props.metricValue
+
   return (
     <>
       <div>
@@ -9,7 +11,7 @@ const BMIInputFields = (props) => {
           <Input
             label={{ basic: true, content: 'Weight' }}
             labelPosition='right'
-            placeholder='Enter your weight...'
+            placeholder={ userChoiceMethod === 'metric' ? ' in kilograms (kg)'  : ' in pounds (lbs)'}
             id="weight" onChange={props.BMIInputChangeHandler}
           />
         </div>
@@ -17,7 +19,7 @@ const BMIInputFields = (props) => {
           <Input
             label={{ basic: true, content: 'Height' }}
             labelPosition='right'
-            placeholder='Enter your height...'
+            placeholder={ userChoiceMethod === 'metric' ? ' in centimetres (cm)'  : ' in inches (in)'}
             id="height" onChange={props.BMIInputChangeHandler}
           />
         </div>

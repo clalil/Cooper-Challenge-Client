@@ -113,6 +113,8 @@ class App extends Component {
       }
     }
 
+    let currentMethod = this.state.method
+
     return (
       <div>
         <div className="ui raised very padded text container segment">
@@ -136,6 +138,7 @@ class App extends Component {
             onChangeValue={this.onChange.bind(this)}
           />
           <BMIInputFields
+            metricValue={this.state.method}
             BMIInputChangeHandler={this.onChange.bind(this)}
           />
           <DisplayBMIResult
