@@ -133,7 +133,7 @@ class App extends Component {
             entryHandler={this.entryHandler.bind(this)}
           />
           {performanceDataIndex}
-
+          <Header size='large' textAlign='center'>The BMI Calculator</Header>
           <MethodSelect
             onChangeValue={this.onChange.bind(this)}
           />
