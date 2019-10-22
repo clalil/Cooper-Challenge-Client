@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const apiUrl = 'https://clarissa-sverrir-cooper.herokuapp.com/api/v1';
+const apiUrl = 'http://localhost:3001/api/v1';
 
 const authenticate = async (email, password) => {
   const path = apiUrl + '/auth/sign_in';

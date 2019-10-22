@@ -5,12 +5,12 @@ describe('User attempts to view his/her performance data', () => {
     cy.server()
     cy.route({
       method: 'GET',
-      url: 'https://clarissa-sverrir-cooper.herokuapp.com/api/v1/performance_data',
+      url: 'http://localhost:3001/api/v1/performance_data',
       response: 'fixture:performance_data_index.json'
     })
     cy.route({
       method: 'POST',
-      url: 'https://clarissa-sverrir-cooper.herokuapp.com/api/v1/auth/sign_in',
+      url: 'http://localhost:3001/api/v1/auth/sign_in',
       response: 'fixture:login.json',
       headers: {
         "uid": "user@mail.com"

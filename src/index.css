@@ -49,6 +49,7 @@ select {
 .ui.fluid.placeholder {
   border-radius: 10px;
   margin: 0.5rem 0 0.5rem 0;
+  text-align: center;
 }
 
 .login-form-div {

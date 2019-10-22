@@ -25,22 +25,21 @@ describe('User attempts save data', () => {
   });
 
   it('successfully', () => {
-    cy.get('input[id="distance"]').type('1000')
-    cy.get('select[id="gender"]').select('female')
-    cy.get('input[id="age"]').type('23')
+    cy.get('select[id="method"]').select('imperial')
+    cy.get('input[id="weight"]').type('200')
+    cy.get('input[id="height"]').type('73')
     cy.get('#save-result').click()
     cy.contains('Your entry was saved')
   })
 
   it('can save two different entries', () => {
-    cy.get('input[id="distance"]').type('1000')
-    cy.get('select[id="gender"]').select('female')
-    cy.get('input[id="age"]').type('23')
+    cy.get('select[id="method"]').select('imperial')
+    cy.get('input[id="weight"]').type('200')
+    cy.get('input[id="height"]').type('73')
     cy.get('#save-result').click()
     cy.contains('Your entry was saved')
-    cy.get('input[id="distance"]')
-      .clear()
-      .type('1500')
+    cy.get('input[id="method"]')
+    cy.click()
     cy.get('#save-result').click()
     cy.contains('Your entry was saved')
   })

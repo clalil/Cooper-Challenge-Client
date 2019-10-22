@@ -1,19 +1,18 @@
 describe('BMI Converter', () => {
   before(() => {
       cy.visit('http://localhost:3001')
-  });
+  })
 
   beforeEach(() => {
       cy.reload()
-  });
+  })
 
   it('should display "BMI Calculator" text on page', () => {
       cy.contains('BMI Calculator')
-  });
+  })
 
   describe('Metric method', () => {
       beforeEach(() => {
-          // This before block will be executed prior to each test in this describe block
           cy.get('select[id="method"]').select('metric')
           cy.get('input[id="weight"]').type('95')
           cy.get('input[id="height"]').type('186')
@@ -30,7 +29,6 @@ describe('BMI Converter', () => {
 
   describe('Imperial method', () => {
       beforeEach(() => {
-          // This before block will be executed prior to each test in this describe block
           cy.get('select[id="method"]').select('imperial')
           cy.get('input[id="weight"]').type('200')
           cy.get('input[id="height"]').type('73')
@@ -44,4 +42,4 @@ describe('BMI Converter', () => {
           cy.contains('BMI of 26.38')
       })
   })
-}); 
+})
