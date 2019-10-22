@@ -1,4 +1,4 @@
-describe('BMI Converter', () => {
+describe('BMI Calculator calculates successfully', () => {
   before(() => {
       cy.visit('http://localhost:3001')
   })

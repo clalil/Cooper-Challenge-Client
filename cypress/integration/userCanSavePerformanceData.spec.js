@@ -1,4 +1,4 @@
-describe('User attempts save data', () => {
+describe('User attempts to save Cooper data', () => {
 
   beforeEach(() => {
     cy.visit('http://localhost:3001')
