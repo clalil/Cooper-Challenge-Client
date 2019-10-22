@@ -11,6 +11,16 @@ class DisplayBMIResult extends Component {
     return BMICalculator(weight, height, method)
   }
 
+  async saveBMIData() {
+    const bmi_result = BMIMessage
+    try {
+      await saveData(bmi_result)
+      this.props.entryHandler()
+    } catch(error) {
+      console.log(error)
+    }
+  }
+
   render() {
     let finalBMI = this.calculate()
 

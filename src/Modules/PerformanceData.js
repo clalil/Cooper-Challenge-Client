@@ -28,14 +28,14 @@ const saveData = async (result) => {
 }
 
 const getData = async () => {
-  let headers = await sessionStorage.getItem("credentials");
+  let headers = await sessionStorage.getItem("credentials")
   headers = JSON.parse(headers)
   headers = {
     ...headers,
     "Content-type": "application/json",
     Accept: "application/json"
   };
-  const path = apiUrl + "/performance_data";
+  const path = apiUrl + "/performance_data"
   return new Promise((resolve, reject) => {
     axios
       .get(path, {
