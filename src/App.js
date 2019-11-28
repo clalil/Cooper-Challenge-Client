@@ -53,7 +53,7 @@ class App extends Component {
     if (this.state.authenticated === true) {
       user = JSON.parse(sessionStorage.getItem('credentials')).uid
       renderLogin = (
-        <p className="hi-user"><Icon name="user outline"/>Hi {user}</p>
+        <p className="hi-user"><Icon name="user outline" />Hi {user}</p>
       )
       performanceDataIndex = (
         <Button color='vk' type='submit' id="show-index"
@@ -110,7 +110,11 @@ class App extends Component {
     return (
       <div>
         <div className="ui raised very padded text container segment">
-        <Header size='large' textAlign='center'>The Cooper Calculator</Header>
+          <Header size='large' textAlign='center'>The Cooper Calculator</Header>
+          <Header as='p' style={{ fontStyle: 'italic' }}>
+            The Cooper Test (aka The 12-minute run) was developed by Dr. Ken Cooper in 1968 as an easy way to measure aerobic fitness.
+            The test requires the person being tested to run or walk as far as possible in a 12 minute period.
+          </Header>
           {renderLogin}
           <InputFields
             inputChangeHandler={this.onChange.bind(this)}

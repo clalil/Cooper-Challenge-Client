@@ -11,17 +11,17 @@ const InputFields = (props) => {
         </select>
         <div className="label-padding">
           <Input
-            label={{ basic: true, content: 'Years' }}
+            label={{ basic: true, content: 'Age (yrs)' }}
             labelPosition='right'
-            placeholder='Enter your age...'
+            placeholder='Enter age in years'
             id="age" onChange={props.inputChangeHandler}
           />
         </div>
         <div className="label-padding">
           <Input
-            label={{ basic: true, content: 'Meters' }}
+            label={{ basic: true, content: 'Distance (meters)' }}
             labelPosition='right'
-            placeholder='Enter your distance...'
+            placeholder='Enter total distance'
             id="distance" onChange={props.inputChangeHandler}
           />
         </div>
